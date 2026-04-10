@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>空き教室検索</title>
+
+<style>
+body {
+  font-family: sans-serif;
+  background: #f5f7fb;
+  margin: 0;
+}
+
+.container {
+  max-width: 400px;
+  margin: auto;
+  padding: 20px;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+}
+
+h2 {
+  text-align: center;
+}
+
+select, button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  font-size: 16px;
+}
+
+button {
+  background: #4f7cff;
+  color: white;
+  border: none;
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+.result-item {
+  background: #eaf0ff;
+  padding: 10px;
+  margin-top: 8px;
+  border-radius: 8px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <div class="card">
+    <h2>空き教室検索</h2>
+
+    <label>曜日</label>
+    <select id="day">
+      <option value="月">月</option>
+      <option value="火">火</option>
+      <option value="水">水</option>
+      <option value="木">木</option>
+      <option value="金">金</option>
+    </select>
+
+    <label>時限</label>
+    <select id="period">
+      <option value="1">1限</option>
+      <option value="2">2限</option>
+      <option value="3">3限</option>
+      <option value="4">4限</option>
+      <option value="5">5限</option>
+      <option value="6">6限</option>
+    </select>
+
+    <button onclick="search()">検索</button>
+  </div>
+
+  <div class="card">
+    <h3>空き教室</h3>
+    <div id="result"></div>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
