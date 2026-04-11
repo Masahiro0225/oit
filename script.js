@@ -49,7 +49,6 @@ async function search() {
   loading.style.display = "block";
 
   // ★わざと遅延（1.5秒）
-  button.disabled = true;
   await sleep(1500);
 
   const day = document.getElementById("day").value;
